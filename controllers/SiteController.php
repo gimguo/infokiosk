@@ -125,4 +125,12 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionInfokiosk()
+    {
+        $this->enableCsrfValidation = false;
+        $this->layout = 'infokiosk';
+
+        return $this->render('infokiosk');
+    }
 }

@@ -2,3 +2,6 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . index.php [L]
+<ifModule mod_headers.c>
+        Header always append X-Frame-Options SAMEORIGIN
+</ifModule>
