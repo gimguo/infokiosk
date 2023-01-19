@@ -7,7 +7,7 @@ services:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
       - ./:/app:delegated
     ports:
-      - '2023:80'
+      - '10000:80'
 
   mysql:
     image: mysql:5.7
@@ -24,6 +24,6 @@ services:
     image: phpmyadmin/phpmyadmin      #    container_name: phpmyadmin
     restart: always
     ports:
-      - '2022:80'
+      - '10001:80'
     environment:
       PMA_HOST: mysql
